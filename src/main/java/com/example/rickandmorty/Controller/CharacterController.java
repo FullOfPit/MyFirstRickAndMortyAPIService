@@ -19,7 +19,7 @@ public class CharacterController {
         return webClientService.getAllCharacters();
     }
 
-    @GetMapping("/character?status=alive")
+    @GetMapping("/status=alive")
     public List<Character> getAllCharactersAlive() {
         return webClientService.somethingElse();
     }

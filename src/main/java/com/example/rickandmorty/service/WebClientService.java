@@ -43,7 +43,7 @@ public class WebClientService {
         WebClient webClient = WebClient.create("https://rickandmortyapi.com/api");
 
         CharacterRepo response = webClient.get()
-                .uri("/character?status=alive")
+                .uri("/character/?status=alive")
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()
                 .toEntity(CharacterRepo.class)
